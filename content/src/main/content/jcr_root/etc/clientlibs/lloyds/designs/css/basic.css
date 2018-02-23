@@ -1,0 +1,31 @@
+* {
+    /*border: 1px solid grey;*/
+    margin: .1em;
+    padding: .1em;
+    font-family: "Trebuchet MS";
+}
+article {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+header {
+    font-size: 2.5vw;
+}
+main {
+    margin-left: 5em;
+    margin-right: 5em;
+    background-image: imageurl('https://www.bankofscotland.co.uk/assets/img/bos-background.png');
+}
+footer {
+    display: block;
+    clear: both;
+    text-align: center;
+    margin: .5em;
+    padding: 1em;
+    font-size: .9vw;
+}
+.short-desc {
+    float: left;
+    width: auto;
+    font-size: 1.5vw;
+}

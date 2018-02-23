@@ -1,0 +1,18 @@
+<div data-sly-test="${wcmmode.edit && !wcmmode.preview}">
+    Edit: Accordion
+</div>
+
+<div class="main-content clearfix" data-sly-use.tabaccordion="com.sr.lloyds.demo.sling.models.TabAccordionSlingModel">
+    <button class="tab">${tabaccordion.firstTitle}</button>
+    <button class="tab">${tabaccordion.secondTitle}</button>
+    <button class="accordion">${tabaccordion.firstTitle}</button>
+    <div class="panel">
+        <p>${tabaccordion.firstText @context='html'}</p>
+    </div>
+
+    <button class="accordion">${tabaccordion.secondTitle}</button>
+    <div class="panel">
+        ${tabaccordion.secondText @context='html'}
+    </div>
+</div>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='sr.lloyds'}"></sly>

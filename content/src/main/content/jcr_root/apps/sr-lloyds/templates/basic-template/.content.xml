@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template"
-    jcr:title="basic template"
-    allowedPaths="[/content/llyods(/.*)?.]"
+    jcr:title="Lloyds Basic Template"
+    jcr:description="This is a basic template to create pages for sample Lloyds application. There are certain things which are hard coded in the template thats why it may not suitable to create all kinds of pages with this template. We are in the process of generalizing this template so that it can reused in creating as many different layouts of pages as possible."
+    allowedPaths="[/content(/.*)?]"
     ranking="{Long}100">
     <jcr:content
         jcr:primaryType="cq:PageContent"

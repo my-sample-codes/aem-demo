@@ -1,0 +1,15 @@
+<div data-sly-test="${wcmmode.edit && !wcmmode.preview}">Edit: Accordion Component</div>
+<div class="main-content clearfix" data-sly-use.accordion="com.sr.lloyds.demo.sling.models.AccordionSlingModel">
+    <p class="fancy">${accordion.heading @context='html'}</p>
+    <sly data-sly-test="${accordion.showExpandCollapse}">
+        <a class="button-type collapse" href="#">Collapse All</a>
+        <a class="button-type expand" href="#">Expand All</a>
+    </sly>
+    <div data-sly-test="${accordion.multiFields}" data-sly-list.multifields="${accordion.multiFields}">
+        <button class="generic-accordion ${multifields.defaultState}">${multifields.headlineText}</button>
+        <div class="accordion-panel ${multifields.defaultState}">
+            <p>${multifields.bodyText @context='html'}</p>
+        </div>
+    </div>
+</div>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='sr.lloyds'}"></sly>

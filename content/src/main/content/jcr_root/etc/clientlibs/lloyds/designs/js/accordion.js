@@ -1,8 +1,9 @@
 $(document).ready(function () {
-    $(".panel").first().css("display", "block");
-    $(".tab").first().addClass('active')
+    $("div.open-state").css("maxHeight", "inherit");
+    $("div.open-state").css("overflow", "auto");
+    $("button.open-state").toggleClass("active");
 
-    $("body").on("click", ".accordion", function () {
+    $(".main-content").on("click", ".generic-accordion", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
@@ -12,11 +13,18 @@ $(document).ready(function () {
         }
     });
 
-    $(".main-content").on("click", ".tab", function (event) {
-        $(".tab").removeClass("active");
-        this.classList.add('active');
-        var tabIndex = $(".tab").index(this);
-        $(".panel").css("display", "none");
-        $(".panel").eq(tabIndex).css("display", "block");
+    $(".main-content").on("click", ".expand", function () {
+        $("button.generic-accordion").addClass("active");
+        $("div.accordion-panel").css("maxHeight", "inherit");
+        $("a.button-type").removeClass("active");
+        this.classList.add("active");
     });
+
+    $(".main-content").on("click", ".collapse", function () {
+        $("button.generic-accordion").removeClass("active");
+        $("div.accordion-panel").css("maxHeight", "");
+        $("a.button-type").removeClass("active");
+        this.classList.add("active");
+    });
+
 });

@@ -32,6 +32,8 @@
 		<publish.crx.password>admin</publish.crx.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -94,6 +96,12 @@
 				<groupId>org.apache.sling</groupId>
 				<artifactId>org.apache.sling.jcr.api</artifactId>
 				<version>2.1.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>org.apache.sling.commons.json</artifactId>
+				<version>2.0.6</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>

@@ -1,7 +1,4 @@
-.main-content {
-    /*border: 1px solid #c0bcbb;*/
-}
-button.accordion {
+button.generic-accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -9,71 +6,70 @@ button.accordion {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 2em;
-    transition: 0.4s;
+    font-size: 1.5em;
+    transition: .5s;
     font-family: "Times New Roman", Times, serif;
     width: 99%;
 }
-button.accordion.active,
-button.accordion:hover {
+button.generic-accordion.active,
+button.generic-accordion:hover {
     background-color: skyblue;
 }
-button.accordion:after {
+button.generic-accordion:after {
     content: '\002B';
     color: #777;
     font-weight: bold;
     float: right;
     margin-left: 5px;
 }
-button.accordion.active:after {
+button.generic-accordion.active:after {
     content: "\2212";
 }
-div.panel {
+div.accordion-panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height .5s ease-out;
 }
-button.tab {
-    display: none;
-}
-.clearfix::after {
-    content: "";
+a.button-type {
+    padding: .5em;
+    margin: .5em;
+    border: .01px solid grey;
+    text-decoration: none;
+    width: auto;
+    text-align: center;
+    display: block;
     clear: both;
-    display: table;
+}
+a.active {
+    background-color: aliceblue;
+}
+a.button-type:before {
+    font-weight: bold;
+    color: black;
+    margin-right: .5em;
+}
+a.button-type.expand:before {
+    content: '\002B';
+}
+a.button-type.collapse:before {
+    content: "\2212";
+}
+.fancy {
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: brown;
+    text-align: center;
 }
 @media only screen and (min-width: 769px) {
-    button.tab {
-        background-color: #eef;
-        color: #445;
-        cursor: pointer;
-        padding: .1em;
-        border: none;
-        text-align: center;
-        outline: inherit;
-        font-size: 2em;
-        transition: 0.4s;
-        font-family: "Times New Roman", Times, serif;
-        width: 49%;
+    .fancy {
         float: left;
-        display: block;
+        text-align: left;
     }
-    button.tab.active,
-    button.tab:hover {
-        background-color: skyblue;
-    }
-    button.accordion {
-        display: none;
-    }
-    button.accordion:after {
-        content: none;
-    }
-    button.accordion.active:after {
-        content: none;
-    }
-    div.panel {
-        display: none;
-        max-height: inherit;
-        overflow: auto;
-        float: left;
+    a.button-type {
+        float: right;
+        width: auto;
+        display: inline;
+        clear: none;
     }
 }

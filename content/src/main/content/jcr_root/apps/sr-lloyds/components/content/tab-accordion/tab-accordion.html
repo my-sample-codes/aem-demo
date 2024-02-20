@@ -1,5 +1,5 @@
 <div data-sly-test="${wcmmode.edit && !wcmmode.preview}">
-    Edit: Accordion
+    Edit: TAB Accordion Component
 </div>
 
 <div class="main-content clearfix" data-sly-use.tabaccordion="com.sr.lloyds.demo.sling.models.TabAccordionSlingModel">
@@ -15,4 +15,5 @@
         ${tabaccordion.secondText @context='html'}
     </div>
 </div>
+<p id="nonmobile-indicator" data-width="${accordion.desktopwidth}"></p>
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='sr.lloyds'}"></sly>

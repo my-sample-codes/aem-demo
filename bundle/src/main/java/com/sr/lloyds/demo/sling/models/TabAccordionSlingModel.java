@@ -38,7 +38,7 @@ public class TabAccordionSlingModel {
 	private String secondText;
 
 	public String getFirstTitle() {
-		LOGGER.info("[TEST] Setting Title of the First Section------->" + firstTitle);
+		LOGGER.info("[TEST] Getting Title of the First Section------->" + firstTitle);
 		return firstTitle;
 	}
 

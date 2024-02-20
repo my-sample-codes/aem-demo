@@ -1,3 +1,4 @@
 #base=js
 basic.js
+tab-accordion.js
 accordion.js
